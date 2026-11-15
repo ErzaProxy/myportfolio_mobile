@@ -29,8 +29,9 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(
+        colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFFBBDD22),
+          primary: const Color(0xFFBBDD22),
           secondary: const Color(0xFF6e9d24),
         ),
         useMaterial3: true,
