@@ -17,7 +17,8 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 AI DISCLOSURE:
-TI7: Model yang digunakan: Gemini 4 Argon
+### TI7
+Model yang digunakan: Gemini 4 Argon
 - Membantu memahami sintaks dan cara menggunakan Flutter/Dart sekaligus memberikan rancangan apa aja yang harus dibuat dan diedit supaya sesuai dengan TI 7
 Link to Chat: https://share.gemini.google/CMGEHNfNqnKn
 
