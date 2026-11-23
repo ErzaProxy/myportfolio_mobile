@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio_mobile/screens/projectlist_form.dart';
+import 'package:myportfolio_mobile/screens/experience_form.dart';
 
 class ItemHomepage {
   final String name;
@@ -21,7 +22,6 @@ class ItemCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         onTap: () {
-          // Memunculkan SnackBar
           ScaffoldMessenger.of(context)
             ..hideCurrentSnackBar()
             ..showSnackBar(
@@ -30,12 +30,18 @@ class ItemCard extends StatelessWidget {
               ),
             );
 
-          // Jika tombol yang ditekan adalah "Tambah Proyek", pindah ke halaman Form!
           if (item.name == "Tambah Proyek") {
             Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => const ProjectFormPage(),
+              ),
+            );
+          } else if (item.name == "Tambah Pengalaman") {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ExperienceFormPage(),
               ),
             );
           }

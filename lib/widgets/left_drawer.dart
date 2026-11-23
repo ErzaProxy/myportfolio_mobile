@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio_mobile/screens/menu.dart';
 import 'package:myportfolio_mobile/screens/projectlist_form.dart';
+import 'package:myportfolio_mobile/screens/experience_form.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -27,7 +28,7 @@ class LeftDrawer extends StatelessWidget {
                 ),
                 Padding(padding: EdgeInsets.all(8)),
                 Text(
-                  "Catat seluruh proyek portofoliomu di sini!",
+                  "Catat seluruh proyek dan pengalaman portofoliomu di sini!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 15,
@@ -38,7 +39,7 @@ class LeftDrawer extends StatelessWidget {
               ],
             ),
           ),
-          // Navigasi 1: Ke Halaman Utama
+          // 1. Opsi Home
           ListTile(
             leading: const Icon(Icons.home_outlined),
             title: const Text('Halaman Utama'),
@@ -51,7 +52,7 @@ class LeftDrawer extends StatelessWidget {
               );
             },
           ),
-          // Navigasi 2: Ke Halaman Form Tambah Proyek
+          // 2. Opsi Add Project
           ListTile(
             leading: const Icon(Icons.add_circle_outline),
             title: const Text('Tambah Proyek'),
@@ -60,6 +61,19 @@ class LeftDrawer extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const ProjectFormPage(),
+                ),
+              );
+            },
+          ),
+          // 3. Tambah Pengalaman
+          ListTile(
+            leading: const Icon(Icons.work_outline),
+            title: const Text('Tambah Pengalaman'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ExperienceFormPage(),
                 ),
               );
             },

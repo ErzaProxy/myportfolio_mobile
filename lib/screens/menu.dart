@@ -12,6 +12,7 @@ class MyHomePage extends StatelessWidget {
   final List<ItemHomepage> items = [
     ItemHomepage("Lihat Proyek", Icons.folder, const Color(0xFF33AAEE)),
     ItemHomepage("Tambah Proyek", Icons.add_circle, const Color(0xFFFFDD44)),
+    ItemHomepage("Tambah Pengalaman", Icons.work, const Color(0xFFBBDD22)),
     ItemHomepage("Logout", Icons.logout, const Color(0xFFEE6666)),
   ];
 
@@ -60,17 +61,28 @@ class MyHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    GridView.count(
-                      primary: false,
-                      padding: const EdgeInsets.all(20),
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                      crossAxisCount: 3,
-                      shrinkWrap: true,
-                      children: items.map((ItemHomepage item) {
-                        return ItemCard(item);
-                      }).toList(),
+
+                    // === BAGIAN INI YANG DIUBAH ===
+                    ConstrainedBox(
+                      // Mengatur ukuran total blok 2x2 (kecilkan lagi jika masih kurang mungil)
+                      constraints: const BoxConstraints(maxWidth: 720),
+                      child: GridView.count(
+                        primary: false,
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 72,
+                          horizontal: 48,
+                        ),
+                        crossAxisSpacing: 20, // Jarak antar tombol kiri-kanan
+                        mainAxisSpacing: 20,  // Jarak antar tombol atas-bawah
+                        crossAxisCount: 2,    // Grid 2x2
+                        childAspectRatio: 1.0, // Ubah ke 1.0 kalau mau kotak persegi sempurna
+                        shrinkWrap: true,
+                        children: items.map((ItemHomepage item) {
+                          return ItemCard(item);
+                        }).toList(),
+                      ),
                     ),
+                    // === BATAS BAGIAN YANG DIUBAH ===
                   ],
                 ),
               ),
