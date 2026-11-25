@@ -22,10 +22,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'MyPortfolio',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
         // Membuat ikon garis tiga (drawer) berwarna putih
@@ -73,9 +70,10 @@ class MyHomePage extends StatelessWidget {
                           horizontal: 48,
                         ),
                         crossAxisSpacing: 20, // Jarak antar tombol kiri-kanan
-                        mainAxisSpacing: 20,  // Jarak antar tombol atas-bawah
-                        crossAxisCount: 2,    // Grid 2x2
-                        childAspectRatio: 1.0, // Ubah ke 1.0 kalau mau kotak persegi sempurna
+                        mainAxisSpacing: 20, // Jarak antar tombol atas-bawah
+                        crossAxisCount: 2, // Grid 2x2
+                        childAspectRatio:
+                            1.0, // Ubah ke 1.0 kalau mau kotak persegi sempurna
                         shrinkWrap: true,
                         children: items.map((ItemHomepage item) {
                           return ItemCard(item);

@@ -90,7 +90,8 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                 padding: const EdgeInsets.only(bottom: 12.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    hintText: "Contoh: Software Engineering Intern / Staf RISTEK",
+                    hintText:
+                        "Contoh: Software Engineering Intern / Staf RISTEK",
                     labelText: "Posisi / Peran",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -147,7 +148,8 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                 child: TextFormField(
                   maxLines: 3, // Kotak teks lebih tinggi untuk deskripsi
                   decoration: InputDecoration(
-                    hintText: "Ceritakan tugas dan pencapaianmu di posisi ini...",
+                    hintText:
+                        "Ceritakan tugas dan pencapaianmu di posisi ini...",
                     labelText: "Deskripsi Pengalaman",
                     alignLabelWithHint: true,
                     border: OutlineInputBorder(
@@ -264,7 +266,8 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                       return null;
                     }
                     final uri = Uri.tryParse(value.trim());
-                    final isValidUrl = uri != null &&
+                    final isValidUrl =
+                        uri != null &&
                         (uri.scheme == 'http' || uri.scheme == 'https') &&
                         uri.host.isNotEmpty;
                     if (!isValidUrl) {
